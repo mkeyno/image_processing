@@ -6,7 +6,7 @@ sg.theme('DarkBlue')
 def GUI():
     left_col = [
                 [sg.Text('Image   Folder'), sg.In(size=(10,1), enable_events=True ,key='-FOLDER-'), sg.FolderBrowse()],
-                [sg.Text('Data Base File'), sg.In(size=(10,1), enable_events=True ,key='-DBfile-'), sg.FileBrowse()],
+                [sg.Text('Data Base File'), sg.In(size=(10,1),  disabled=True, enable_events=True ,key='-DBfile-'), sg.FileBrowse( disabled=True)],
                 [sg.Radio('Both side','Radio', enable_events=True, key='bside'),sg.Radio('Left side','Radio', enable_events=True, key='lside'),sg.Radio('Right side','Radio', enable_events=True, key='rside') ],
                 [sg.Text('Count'),sg.Text(' '*5,key='num_of_image')],
                 [sg.Listbox(values=[], enable_events=True, size=(30,15),key='-FILE LIST-')],
